@@ -24,9 +24,19 @@ function check(){
     var finalRange = document.getElementById("finalRange").value;
     var randomNum = randomGen();
     if(randomNum>=intialRange && randomNum<finalRange){
-        alert("The Number is : "+randomNum+" and You guess it correct")
+        Swal.fire(
+            'Good job!',
+            "The Number is : "+randomNum+" and You guess it correct",
+            'success'
+          )
+        // alert("")
     }else{
-        alert("The Number is : "+randomNum+" and You guess it incorrect")
+        // alert()
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: "The Number is : "+randomNum+" and You guess it incorrect"
+          })
     }
     // console.log(randomNum>=intialRange);
     // console.log(randomNum<finalRange);
